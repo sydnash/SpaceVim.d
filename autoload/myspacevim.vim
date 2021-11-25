@@ -21,6 +21,13 @@ function! SetTerminalTitle()
 endfunction
 
 function! myspacevim#before() abort
+    call SpaceVim#custom#SPCGroupName(['u'], '+DebugGolang')
+    call SpaceVim#custom#SPC('nnoremap', ['u', 'b'], ':GoDebugBreakpoint', 'add breakpoint', 1)
+    call SpaceVim#custom#SPC('nnoremap', ['u', 'r'], ':GoDebugStart', 'start debug current file', 1)
+    call SpaceVim#custom#SPC('nnoremap', ['u', 'c'], ':GoDebugContinue', 'continue', 1)
+    call SpaceVim#custom#SPC('nnoremap', ['u', 'n'], ':GoDebugNext', 'next', 1)
+    call SpaceVim#custom#SPC('nnoremap', ['u', 's'], ':GoDebugStep', 'step in', 1)
+    call SpaceVim#custom#SPC('nnoremap', ['u', 'S'], ':GoDebugStepOut', 'step out', 1)
 endfunction
 
 function! myspacevim#after() abort
@@ -33,7 +40,4 @@ function! myspacevim#after() abort
     set t_fs=
     call SetTerminalTitle()
     " autocmd BufEnter * call SetTerminalTitle()
-
-    call SpaceVim#custom#SPCGroupName(['O'], '+TestGroup')
-    call SpaceVim#custom#SPC('nore', ['O', 'o'], 'echom 1', 'echomessage 1', 1)
 endfunction
