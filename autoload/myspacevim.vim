@@ -26,14 +26,23 @@ function! myspacevim#before() abort
     call SpaceVim#custom#SPC('nnoremap', ['u', 'r'], ':GoDebugStart', 'start debug current file', 1)
     call SpaceVim#custom#SPC('nnoremap', ['u', 'c'], ':GoDebugContinue', 'continue', 1)
     call SpaceVim#custom#SPC('nnoremap', ['u', 'n'], ':GoDebugNext', 'next', 1)
-    call SpaceVim#custom#SPC('nnoremap', ['u', 's'], ':GoDebugStep', 'step in', 1)
-    call SpaceVim#custom#SPC('nnoremap', ['u', 'S'], ':GoDebugStepOut', 'step out', 1)
+    call SpaceVim#custom#SPCGroupName(['u', 's'], '+DebugGolang step')
+    call SpaceVim#custom#SPC('nnoremap', ['u', 's', 'i'], ':GoDebugStep', 'step in', 1)
+    call SpaceVim#custom#SPC('nnoremap', ['u', 's', 'o'], ':GoDebugStepOut', 'step out', 1)
 endfunction
 
 function! myspacevim#after() abort
-    nmap tgb :!git blame %<CR>
-    nmap tgp :!git log -p %<CR>
-    nmap tge :!echo %<CR>
+    nnoremap tgb :!git blame %<CR>
+    nnoremap tgp :!git log -p %<CR>
+    nnoremap tge :!echo %<CR>
+
+    nmap or <Space>ur
+    nmap ob <Space>ub
+    nmap oc <Space>uc
+    nmap on <Space>un
+    nmap osi <Space>usi
+    nmap oso <Space>uso
+    nnoremap op :GoDebugPrint 
 
     " Set the title of the Terminal to the currently open file
     set t_ts=]1;
