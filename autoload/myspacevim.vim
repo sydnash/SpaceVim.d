@@ -47,6 +47,6 @@ function! myspacevim#after() abort
     " Set the title of the Terminal to the currently open file
     set t_ts=]1;
     set t_fs=
-    call SetTerminalTitle()
-    " autocmd BufEnter * call SetTerminalTitle()
+    " call SetTerminalTitle()
+    autocmd TermResponse,FocusGained,ShellCmdPost * call SetTerminalTitle()
 endfunction
