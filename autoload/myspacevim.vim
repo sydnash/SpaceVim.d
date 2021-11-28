@@ -29,6 +29,10 @@ function! myspacevim#before() abort
     call SpaceVim#custom#SPCGroupName(['u', 's'], '+DebugGolang step')
     call SpaceVim#custom#SPC('nnoremap', ['u', 's', 'i'], ':GoDebugStep', 'step in', 1)
     call SpaceVim#custom#SPC('nnoremap', ['u', 's', 'o'], ':GoDebugStepOut', 'step out', 1)
+
+    let spacevim_default_custom_leader=';'
+    nnoremap <silent><nowait> [SPC] :<c-u>LeaderGuide ' '<CR>
+    vnoremap <silent><nowait> [SPC] :<c-u>LeaderGuideVisual ' '<CR>
 endfunction
 
 function! myspacevim#after() abort

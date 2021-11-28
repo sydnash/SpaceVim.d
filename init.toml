@@ -44,6 +44,8 @@
     bootstrap_before = "myspacevim#before"
     bootstrap_after  = "myspacevim#after"
 
+    default_custom_leader = ';'
+
 [[layers]]
 name = 'core'
 enable_smooth_scrolling = 0
