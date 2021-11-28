@@ -45,6 +45,8 @@
     bootstrap_after  = "myspacevim#after"
 
     default_custom_leader = ';'
+    windows_leader = 's'
+    mapleader = '\'
 
 [[layers]]
 name = 'core'
