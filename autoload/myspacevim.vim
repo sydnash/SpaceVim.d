@@ -39,6 +39,7 @@ function! myspacevim#after() abort
     nnoremap tgb :!git blame %<CR>
     nnoremap tgp :!git log -p %<CR>
     nnoremap tge :!echo %<CR>
+    nnoremap tgg :NERDTreeFind<CR>
 
     nmap or <Space>ur
     nmap ob <Space>ub
