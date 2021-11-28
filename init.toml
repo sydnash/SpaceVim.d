@@ -16,12 +16,53 @@
     # Disable guicolors in basic mode, many terminal do not support 24bit
     # true colors, the type of the value is boolean, true or false.
     enable_guicolors = true
+
+    # -------------statusline config
     # Disable statusline separator, if you want to use other value, please
     # install nerd fonts
-    statusline_separator = "nil"
+    statusline_separator = "arrow"
     statusline_iseparator = "bar"
     buffer_index_type = 4
     windows_index_type = 3
+    # Enable/Disable show mode on statusline
+    enable_statusline_mode = true
+
+    # left sections of statusline
+    statusline_left_sections = [
+       'winnr',
+       'major mode',
+       'filename',
+       'fileformat',
+       'minor mode lighters',
+       'version control info',
+       'search status'
+    ]
+    # right sections of statusline
+    statusline_right_sections = [
+       'cursorpos',
+       'percentage',
+       'input method',
+       'date',
+       'time'
+    ]
+
+    # 'winnr' window number
+    # 'syntax checking'
+    # 'filename' file name
+    # 'fileformat' file format
+    # 'major mode'
+    # 'minor mode lighters'
+    # 'cursorpos' cursor position
+    # 'percentage' content range
+    # 'date' date
+    # 'time' time
+    # 'whitespace' line number with trailing space at the end
+    # 'battery status' battery status
+    # 'input method' input method
+    # 'search status' search index
+    # ------------------------statusline config end
+
+
     # Display file type icon on the tabline, If you do not have nerd fonts
     # installed, please change the value to false
     enable_tabline_filetype_icon = true
@@ -57,6 +98,10 @@ enable_smooth_scrolling = 0
 name = 'autocomplete'
 auto_completion_return_key_behavior = "complete"
 auto_completion_tab_key_behavior = "cycle"
+
+# search index 
+[[layers]]
+    name = "incsearch"
 
 [[layers]]
 name = 'shell'
@@ -113,3 +158,4 @@ name = "lang#sh"
 name = "lang#javascript"
 [[layers]]
 name = "lang#html"
+
