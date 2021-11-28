@@ -1,21 +1,21 @@
 function! CurDir()
-    let maxTitleLen = 20
-    let curdir = getcwd()
-    let len = strcharlen(curdir)
-    if len > maxTitleLen
-        return '..' . strcharpart(curdir, len - maxTitleLen, maxTitleLen)
+    let l:maxTitleLen = 20
+    let l:curdir = getcwd()
+    let l:len = strcharlen(l:curdir)
+    if l:len > maxTitleLen
+        return '..' . strcharpart(l:curdir, l:len - l:maxTitleLen, l:maxTitleLen)
     endif
-    return curdir
+    return l:curdir
 endfunction
 
 function! SetTerminalTitle()
-    let titleString = CurDir()
+    let l:titleString = CurDir()
     if len(titleString) > 0
-        let &titlestring = CurDir()
+        let l:titlestring = CurDir()
         " this is the format iTerm2 expects when setting the window title
-        let args = "\033];".&titlestring."\007"
-        let cmd = 'silent !echo -e "'.args.'"'
-        execute cmd
+        let l:args = "\033];".l:titlestring."\007"
+        let l:cmd = 'silent !echo -e "'.l:args.'"'
+        execute l:cmd
         redraw!
     endif
 endfunction
@@ -30,7 +30,7 @@ function! myspacevim#before() abort
     call SpaceVim#custom#SPC('nnoremap', ['u', 's', 'i'], ':GoDebugStep', 'step in', 1)
     call SpaceVim#custom#SPC('nnoremap', ['u', 's', 'o'], ':GoDebugStepOut', 'step out', 1)
 
-    let spacevim_default_custom_leader=';'
+    let g:spacevim_default_custom_leader=';'
     nnoremap <silent><nowait> [SPC] :<c-u>LeaderGuide ' '<CR>
     vnoremap <silent><nowait> [SPC] :<c-u>LeaderGuideVisual ' '<CR>
 endfunction
