@@ -40,6 +40,7 @@ function! myspacevim#after() abort
     nnoremap tgp :!git log -p %<CR>
     nnoremap tge :!echo %<CR>
     nnoremap tgg :NERDTreeFind<CR>
+    nnoremap tgc :NERDTreeCWD<CR>
 
     nmap or <Space>ur
     nmap ob <Space>ub
@@ -52,6 +53,5 @@ function! myspacevim#after() abort
     " Set the title of the Terminal to the currently open file
     set t_ts=]1;
     set t_fs=
-    " call SetTerminalTitle()
     autocmd TermResponse,FocusGained,ShellCmdPost * call SetTerminalTitle()
 endfunction
