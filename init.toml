@@ -137,7 +137,7 @@ name = "lsp"
 filetypes = [
   "c",
   "cpp"
-  "go"
+# "go"
   "python"
 #  "css"
 #  "javascript"
