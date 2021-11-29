@@ -42,12 +42,12 @@ function! myspacevim#after() abort
     nnoremap tgg :NERDTreeFind<CR>
     nnoremap tgc :NERDTreeCWD<CR>
 
-    nmap or <Space>ur
-    nmap ob <Space>ub
-    nmap oc <Space>uc
-    nmap on <Space>un
-    nmap osi <Space>usi
-    nmap oso <Space>uso
+    nmap or :GoDebugStart
+    nmap ob :GoDebugBreakpoint
+    nmap oc :GoDebugContinue
+    nmap on :GoDebugNext
+    nmap osi :GoDebugStep
+    nmap oso :GoDebugStepOut
     nnoremap op :GoDebugPrint 
 
     " Set the title of the Terminal to the currently open file
