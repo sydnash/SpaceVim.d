@@ -81,6 +81,7 @@
     default_indent=4
     # coc
     autocomplete_method = "coc"
+    snippet_engine = "ultisnips"
     # bootstrap
     bootstrap_before = "myspacevim#before"
     bootstrap_after  = "myspacevim#after"
@@ -96,8 +97,8 @@ enable_smooth_scrolling = 0
 # Enable autocomplete layer
 [[layers]]
 name = 'autocomplete'
-auto_completion_return_key_behavior = "complete"
-auto_completion_tab_key_behavior = "cycle"
+auto_completion_return_key_behavior = "smart"
+auto_completion_tab_key_behavior = "smart"
 
 # search index 
 [[layers]]
@@ -117,7 +118,6 @@ name="lang#python"
 [[layers]]
 name="lang#c"
 clang_executable = "/usr/bin/clang"
-
 #enable_clang_syntax_highlight = true
 [layer.clang_std]
     c = "c11"
@@ -143,6 +143,11 @@ filetypes = [
 #  "javascript"
 #  "javascriptreact"
 ]
+[layers.override_cmd]
+    python = ['pyls']
+    c = ['clangd']
+
+
 
 [[layers]]
 name = "checkers"
@@ -152,10 +157,10 @@ name = "git"
 name = "lang#vim"
 [[layers]]
 name = "lang#json"
-[[layers]]
-name = "lang#sh"
-[[layers]]
-name = "lang#javascript"
-[[layers]]
-name = "lang#html"
+#[[layers]]
+#name = "lang#sh"
+#[[layers]]
+#name = "lang#javascript"
+#[[layers]]
+#name = "lang#html"
 
