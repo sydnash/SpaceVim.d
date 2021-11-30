@@ -21,6 +21,7 @@ function! SetTerminalTitle()
 endfunction
 
 function! myspacevim#before() abort
+    let g:coc_config_home = '$HOME/.SpaceVim.d/'
     call SpaceVim#custom#SPCGroupName(['u'], '+DebugGolang')
     call SpaceVim#custom#SPC('nnoremap', ['u', 'b'], ':GoDebugBreakpoint', 'add breakpoint', 1)
     call SpaceVim#custom#SPC('nnoremap', ['u', 'r'], ':GoDebugStart', 'start debug current file', 1)
@@ -49,6 +50,10 @@ function! myspacevim#after() abort
     nmap osi :GoDebugStep
     nmap oso :GoDebugStepOut
     nnoremap op :GoDebugPrint 
+
+    noremap qqq :qall!<CR>
+    noremap ws :w<CR>
+    noremap wq :wq<CR>
 
     " Set the title of the Terminal to the currently open file
     set t_ts=]1;
