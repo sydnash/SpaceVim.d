@@ -1,4 +1,5 @@
   {
+      "json.trace.server": "verbose",
           "languageserver":
           {
                   "clangd":
