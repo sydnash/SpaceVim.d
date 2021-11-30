@@ -52,8 +52,8 @@ function! myspacevim#after() abort
     nnoremap op :GoDebugPrint 
 
     noremap qqq :qall!<CR>
-    noremap ws :w<CR>
-    noremap wq :wq<CR>
+    noremap ss :w<CR>
+    noremap sq :wq<CR>
 
     " Set the title of the Terminal to the currently open file
     set t_ts=]1;
