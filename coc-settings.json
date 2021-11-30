@@ -25,7 +25,7 @@
                   },
                 "gopls0" :{
                     "command":"gopls",
-                    "args":["serve", "-debug", "0.0.0.0:8484", "-rpc.trace", "-logfile", "auto"],
+                    "args":["serve", "-debug", "0.0.0.0:8484", "-rpc.trace"],
                     "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
                     "filetypes":["go"],
                     "initializationOptions": {
