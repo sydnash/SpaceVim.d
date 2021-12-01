@@ -1,6 +1,6 @@
   {
       "$schema":"file:///Users/sydnash/.SpaceVim.d/schema",
-      "json.trace.server": "verbose",
+      "json.trace.server1": "verbose",
       "json.schemaDownload.enable": true,
       "languageserver":
       {
