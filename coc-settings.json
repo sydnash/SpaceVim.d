@@ -33,7 +33,8 @@
                 "filetypes":["go"],
                 "initializationOptions": {
                     "experimentalWorkspaceModule": true,
-                    "usePlaceholders": true
+                    "usePlaceholders": true,
+                    "staticcheck": true
                 }
             }
       }
