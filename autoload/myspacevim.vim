@@ -22,7 +22,7 @@ endfunction
 
 function! myspacevim#before() abort
     let g:coc_config_home = '$HOME/.SpaceVim.d/'
-    #let $NVIM_COC_LOG_LEVEL='all'
+    " let $NVIM_COC_LOG_LEVEL='all'
     call SpaceVim#custom#SPCGroupName(['u'], '+DebugGolang')
     call SpaceVim#custom#SPC('nnoremap', ['u', 'b'], ':GoDebugBreakpoint', 'add breakpoint', 1)
     call SpaceVim#custom#SPC('nnoremap', ['u', 'r'], ':GoDebugStart', 'start debug current file', 1)
