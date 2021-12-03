@@ -2,6 +2,8 @@
       "$schema":"file:///Users/sydnash/.SpaceVim.d/schema",
       "json.trace.server1": "verbose",
       "json.schemaDownload.enable": true,
+      "diagnostic.autoRefresh": true,
+      "diagnostic.checkCurrentLine": true,
       "languageserver":
       {
               "clangd":
@@ -34,7 +36,12 @@
                 "initializationOptions": {
                     "experimentalWorkspaceModule": true,
                     "usePlaceholders": true,
-                    "staticcheck": true
+                    "staticcheck": true,
+                    "analyses": {
+                        "shadow": true,
+                        "unusedparams": true,
+                        "nilness": true
+                    }
                 }
             }
       }
