@@ -1,7 +1,7 @@
 function! CurDir()
     let l:maxTitleLen = 20
     let l:curdir = getcwd()
-    let l:len = strcharlen(l:curdir)
+    let l:len = strchars(l:curdir, 1)
     if l:len > maxTitleLen
         return '..' . strcharpart(l:curdir, l:len - l:maxTitleLen, l:maxTitleLen)
     endif
