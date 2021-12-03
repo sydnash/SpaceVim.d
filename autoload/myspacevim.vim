@@ -9,14 +9,15 @@ function! CurDir()
 endfunction
 
 function! SetTerminalTitle()
-    let l:titleString = CurDir()
-    if len(titleString) > 0
-        let l:titlestring = CurDir()
+    let l:title = CurDir()
+    if len(l:title) > 0
+        let l:title = CurDir()
         " this is the format iTerm2 expects when setting the window title
-        let l:args = "\033];".l:titlestring."\007"
+        let l:args = "\033];".l:title."\007"
         let l:cmd = 'silent !echo -e "'.l:args.'"'
         execute l:cmd
         redraw!
+        let &titlestring=l:title
     endif
 endfunction
 
@@ -57,7 +58,9 @@ function! myspacevim#after() abort
     noremap sq :wq<CR>
 
     " Set the title of the Terminal to the currently open file
+    set title
     set t_ts=]1;
     set t_fs=
+    call SetTerminalTitle()
     autocmd TermResponse,FocusGained,ShellCmdPost * call SetTerminalTitle()
 endfunction
