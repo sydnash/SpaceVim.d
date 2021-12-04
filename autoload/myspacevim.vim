@@ -17,7 +17,9 @@ function! SetTerminalTitle()
         let l:cmd = 'silent !echo -e "'.l:args.'"'
         execute l:cmd
         redraw!
-        let &titlestring=l:title
+        if has('nvim')
+            let &titlestring=l:title
+        endif
     endif
 endfunction
 
@@ -58,7 +60,9 @@ function! myspacevim#after() abort
     noremap sq :wq<CR>
 
     " Set the title of the Terminal to the currently open file
-    set title
+    if has('nvim')
+        set title
+    endif
     set t_ts=]1;
     set t_fs=
     call SetTerminalTitle()
