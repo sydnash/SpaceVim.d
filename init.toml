@@ -134,6 +134,7 @@ clang_executable = "/usr/bin/clang"
 
 [[layers]]
 name = "lsp"
+enabled_clients = ["clangd", "gopls", "pylsp"]
 filetypes = [
   "c",
   "cpp"
@@ -144,7 +145,7 @@ filetypes = [
 #  "javascriptreact"
 ]
 [layers.override_cmd]
-    python = ['pyls']
+    python = ['pylsp']
     c = ['clangd']
 
 
