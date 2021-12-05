@@ -62,7 +62,7 @@ function! myspacevim#after() abort
     " Set the title of the Terminal to the currently open file
     if has('nvim')
         set title
-        lua  vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {virtual_text=false,underline=false,update_in_insert=false,signs=false})
+        lua require('nvim-lsp').disable_nvim_lsp_diagnostics()
     endif
     set t_ts=]1;
     set t_fs=
