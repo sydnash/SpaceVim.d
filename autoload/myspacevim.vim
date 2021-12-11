@@ -67,5 +67,5 @@ function! myspacevim#after() abort
     set t_ts=]1;
     set t_fs=
     call SetTerminalTitle()
-    autocmd TermResponse,FocusGained,ShellCmdPost * call SetTerminalTitle()
+    autocmd TermResponse,FocusGained * call SetTerminalTitle()
 endfunction
