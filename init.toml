@@ -35,7 +35,6 @@
        'fileformat',
        'minor mode lighters',
        'version control info',
-       'search status'
     ]
     # right sections of statusline
     statusline_right_sections = [
@@ -100,10 +99,6 @@ name = 'autocomplete'
 auto_completion_return_key_behavior = "smart"
 auto_completion_tab_key_behavior = "smart"
 
-# search index 
-[[layers]]
-    name = "incsearch"
-
 [[layers]]
 name = 'shell'
 default_position = 'top'
@@ -134,7 +129,7 @@ clang_executable = "/usr/bin/clang"
 
 [[layers]]
 name = "lsp"
-enabled_clients = ["clangd", "gopls", "pylsp"]
+enabled_clients = ["clangd", "pylsp"]
 filetypes = [
   "c",
   "cpp"
@@ -147,8 +142,6 @@ filetypes = [
 [layers.override_cmd]
     python = ['pylsp']
     c = ['clangd']
-
-
 
 [[layers]]
 name = "checkers"
