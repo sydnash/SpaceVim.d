@@ -129,7 +129,7 @@ name="lang#c"
 
 [[layers]]
 name = "lsp"
-enabled_clients = ["ccls", "pylsp"]
+enabled_clients = ["clangd", "pylsp"]
 filetypes = [
   "c",
   "cpp"
@@ -141,7 +141,7 @@ filetypes = [
 ]
 [layers.override_cmd]
     python = ['pylsp']
-    c = ['ccls']
+#    c = ['ccls']
 
 [[layers]]
 name = "checkers"
