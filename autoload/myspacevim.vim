@@ -59,6 +59,8 @@ function! myspacevim#after() abort
     noremap ss :w<CR>
     noremap sq :wq<CR>
 
+    inoremap <C-e> <Esc>$a
+
     " Set the title of the Terminal to the currently open file
     if has('nvim')
         set title
