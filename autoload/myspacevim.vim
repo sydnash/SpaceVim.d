@@ -47,6 +47,11 @@ function! myspacevim#after() abort
     nnoremap tgg :NERDTreeFind<CR>
     nnoremap tgc :NERDTreeCWD<CR>
 
+    if has('nvim')
+        nnoremap tgb :te! git blame %<CR> i
+        nnoremap tgp :te! git log -p %<CR> i
+    endif
+
     nmap or :GoDebugStart
     nmap ob :GoDebugBreakpoint
     nmap oc :GoDebugContinue

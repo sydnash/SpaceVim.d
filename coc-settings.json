@@ -42,7 +42,7 @@
                     "usePlaceholders": true,
                     "staticcheck": true,
                     "analyses": {
-                        "shadow": true,
+                        "shadow1": true,
                         "unusedparams": true,
                         "nilness": true
                     }
