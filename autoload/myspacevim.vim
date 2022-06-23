@@ -70,6 +70,18 @@ function! myspacevim#after() abort
     if has('nvim')
         set title
         lua require('nvim-lsp').disable_nvim_lsp_diagnostics()
+
+
+        let g:neomake_golangci_lint_maker = {
+        \ 'exe': 'golangci-lint',
+        \ 'args': ['run', '--out-format=line-number', '--print-issued-lines=false', '--disable=structcheck', '--enable-all'],
+        \ 'output_stream': 'stdout',
+        \ 'append_file': 0,
+        \ 'cwd': '%:h',
+        \ 'errorformat':
+            \ '%f:%l:%c: %m,' .
+            \ '%f:%l: %m'
+        \ }
     endif
     set t_ts=]1;
     set t_fs=
