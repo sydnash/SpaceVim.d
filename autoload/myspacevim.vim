@@ -74,7 +74,7 @@ function! myspacevim#after() abort
 
         let g:neomake_golangci_lint_maker = {
         \ 'exe': 'golangci-lint',
-        \ 'args': ['run', '--out-format=line-number', '--print-issued-lines=false', '--disable=structcheck', '--enable-all'],
+        \ 'args': ['run', '--out-format=line-number', '--print-issued-lines=false', '--disable=structcheck'],
         \ 'output_stream': 'stdout',
         \ 'append_file': 0,
         \ 'cwd': '%:h',
